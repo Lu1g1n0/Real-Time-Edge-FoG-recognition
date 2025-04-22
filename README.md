@@ -19,19 +19,21 @@ The script takes two CSV files as input:
 - `train_data.csv` for training data
 - `test_data.csv` for testing data
 
-These files should contain a table with N samples and 4 columns. The 4 columns contain angular velocity data (`accX`, `accY`, `accZ`, measured in g-force) and the FoG label (`fogLabel`). 
+These files should contain a table with N samples and 4 columns. The 4 columns contain angular velocity data (`accX`, `accY`, `accZ`, measured in g-force), the magnitude vector, and the FoG label (`fogLabel`). 
 The number of samples depends on the amount of data, that should be sampled or resampled at 32 Hz.
 
 #### Example Data Format
 
 Here's an example of the expected format for the CSV files:
 
-| accX   | accY   | accZ   | fogLabel |
-|--------|--------|--------|----------|
-| -1.34 |  -0.40 |  0.89  |        0 |
-| -1.11  |  -0.38 |  -0.88 |        1 |
-| -3.41 | -0.21 |  -0.82 |        0 |
-|   ...  |   ...  |   ...  |      ... |
+| accX         | accY         | accZ         | mag         | fogLabel |
+|--------------|--------------|--------------|-------------|----------|
+| -0.973987593 | -0.021478966 | -0.10645139  | 0.980022998 | 0        |
+| -0.974905024 | -0.020255725 | -0.10645139  | 0.980908762 | 0        |
+| -0.974905024 | -0.020969282 | -0.105533959 | 0.980824619 | 0        |
+| -0.973274036 | -0.020561535 | -0.104922338 | 0.979129114 | 1        |
+| -0.974905024 | -0.021173156 | -0.104616527 | 0.980730711 | 1        |
+| -0.975516645 | -0.022600271 | -0.103699096 | 0.981273152 | 0        |
 
 ### Output
 
